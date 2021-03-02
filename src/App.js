@@ -18,9 +18,6 @@ function App() {
             <Route exact path="/marcas">
               <Brands />
             </Route>
-            <Route exact path="/pedidos">
-              <OrderByDay />
-            </Route>
             <Route exact path="/nuevo-pedido">
               <NewOrder />
             </Route>

@@ -151,6 +151,7 @@ export default function NewOrder() {
     })
     .then( r => r.json() )
     .then( json => {
+      console.log(json);
       if(!json.error){
         alert("Pedido Realizado");
         setstate({

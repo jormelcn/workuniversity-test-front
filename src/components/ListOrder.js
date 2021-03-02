@@ -19,6 +19,13 @@ export default function ListOrder({res}) {
         return `${date.substring(0, 10)}  ${dayName} `;
     }
 
+    const assignedHours = (workDay) => {
+      let sum = 0;
+      for(let i = 0; i < workDay.assignedOrders.length; i++)
+        sum += workDay.assignedOrders[i].quantity * workDay.assignedOrders[i].vehicleType.manufacturingHours;
+      return sum;
+    }
+
     return (
         <Fragment>
             {res ? (
@@ -27,9 +34,9 @@ export default function ListOrder({res}) {
               className="grid w-full border border-gray-300  bg-white shadow rounded"
               key={i}
             >
-              <h1 className="font-bold flex justify-center items-center p-3 bg-green-600 text-white">
+              <h1 className="font-bold flex justify-left items-center p-3 bg-gray-500 text-white">
                 {" "}
-                {formatDate(p.date)}{" "}{" ["}{ p.workHours }{" Horas Máximo]"}
+                {`${formatDate(p.date)},  ${p.workHours} Horas Máximo, ${assignedHours(p)} asignadas`}
               </h1>
               <div className="flex items-center gap-3 text-center p-5">
                 {p.assignedOrders ? (
