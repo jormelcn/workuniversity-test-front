@@ -17,12 +17,6 @@ export default function Navbar() {
         </Link>
         <Link
           className="font-semibold hover:bg-green-300 p-2 border border-gray-200 rounded"
-          to="/pedidos"
-        >
-          Pedidos en cola
-        </Link>
-        <Link
-          className="font-semibold hover:bg-green-300 p-2 border border-gray-200 rounded"
           to="marcas"
         >
           Marcas

@@ -216,12 +216,14 @@ export default function Marks() {
 
   return (
     <section className="flex justify-between items-center gap-10">
-      <div className="w-1/2 shadow p-4 shadow bg-white">
-        <table className="table-fixed text-center   ">
+      <div className="w-1/2">
+        <h1 className="text-3xl">Marcas:</h1>
+        <table className="table-fixed text-center shadow p-4 shadow bg-white">
           <thead>
-            <tr>
+            <tr className="bg-gray-200">
               <th className="w-1/2">Marca</th>
               <th className="w-1/2">Horas de Fabricación</th>
+              <th>{" "}</th>
             </tr>
           </thead>
           <tbody>
@@ -231,9 +233,11 @@ export default function Marks() {
                 <td className=" font-medium "> {m.manufacturingHours} </td>
                 <td className=" flex ">
                   <div className="mr-3 text-orange">
-                    <span onClick={() => handleActiveEdit(m)}><Edit width={24} color="orange" /></span>
+                    <span className="cursor-pointer" onClick={() => handleActiveEdit(m)}>
+                      <Edit width={24} color="orange" />
+                    </span>
                   </div>
-                  <span onClick={() => handleDelete(m)}>
+                  <span className="cursor-pointer" onClick={() => handleDelete(m)}>
                     <Delete width={24} color="red" />
                   </span>
                 </td>
