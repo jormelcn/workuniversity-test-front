@@ -8,7 +8,7 @@ import NewOrder from "./pages/NewOrder";
 function App() {
   return (
     <Router>
-      <div className=" h-full w-full bg-gray-100">
+      <div className=" h-full w-full">
         <NavBar />
         <section className="container mx-auto px-4">
           <Switch>
